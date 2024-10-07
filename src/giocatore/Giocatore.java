@@ -36,14 +36,14 @@ public class Giocatore {
 
 
     public Giocatore(String nomeNuovo, String capitanoNuovo, int goalNuovo) {
-        nome = nomeNuovo;
-        capitano = capitanoNuovo;
-        goal = goalNuovo;
+        setNome(nomeNuovo);
+        setCapitano(capitanoNuovo);
+        setGoal(goalNuovo);
     }
     public Giocatore (){
-        nome = null;
-        capitano = null;
-        goal = 0;
+        setNome(null);
+        setCapitano(null);
+        setGoal(0);
     }
 
 
