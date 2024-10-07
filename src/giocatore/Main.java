@@ -38,6 +38,8 @@ public class Main {
             g[conta] = g2;
         }
 
+        System.out.println ("sono stupido! e anche tanto");
+
 
     }
 }
