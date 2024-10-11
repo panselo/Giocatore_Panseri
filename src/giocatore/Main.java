@@ -22,6 +22,22 @@ public class Main {
         System.out.println ("Goal giocatore 2: "); g2.setGoal(in.nextInt());
         in.nextLine();
 
+        while (true) {
+            System.out.println("0 - Inserisci giocatore");
+            System.out.println("1 - Mostra squadra");
+            System.out.println("2 - Modifica giocatore");
+            System.out.println("3 - Rimuovi giocatore");
+            System.out.println("4 - Visualizza giocatori con almeno 5 goal");
+            System.out.println("5 - Visualizza capitano");
+            System.out.println("6 - Assegna capitano casualmente");
+            System.out.println("7 - Esci");
+            System.out.print("Scelta: ");
+            int scelta = input.nextInt();
+            switch (scelta) {
+                case 0:
+
+            }
+
         g[0] = g1;
 
         System.out.println("Vuoi aggiungere un giocatore?: ");
