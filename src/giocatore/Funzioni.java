@@ -25,4 +25,11 @@ public class Funzioni {
         g[indice].setCapitano(capitanoNuovo);
 
     }
+
+    public static int eliminaGiocatore(Giocatore[] g, int indice, int giocatore){
+        for (int l = indice; l<giocatore-1; l++){
+            g[l] = g[l+1];
+        }
+        return giocatore-1;
+    }
 }

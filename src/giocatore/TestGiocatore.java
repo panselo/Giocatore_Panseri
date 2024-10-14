@@ -10,9 +10,9 @@ public class TestGiocatore {
 
         Scanner in = new Scanner (System.in);
         int scelta;
-        String nome = " ";
-        String capitano = " ";
-        int goal = 0;
+        String nome;
+        String capitano;
+        int goal;
         int conta = 0;
         int giocatore;
 
@@ -70,6 +70,8 @@ public class TestGiocatore {
                     }
 
                 case 4:
+                    System.out.println("Quale giocatore vuoi eliminare?: ");
+                    giocatore = in.nextInt();
 
                     break;
 
