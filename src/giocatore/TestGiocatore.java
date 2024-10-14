@@ -18,7 +18,7 @@ public class TestGiocatore {
 
 
         do {
-            System.out.println("\nScegli un'opzione:");
+
             System.out.println("1. Aggiungi un giocatore");
             System.out.println("2. Visualizza tutti i giocatori");
             System.out.println("3. Modifica un giocatore");
@@ -27,17 +27,18 @@ public class TestGiocatore {
             System.out.println("6. Visualizza il capitano");
             System.out.println("7. Assegna il capitano in modo casuale");
             System.out.println("0. Esci");
+            System.out.println("\nScegli un'opzione:");
             scelta = in.nextInt();
-            switch (scelta){
+            switch (scelta) {
 
                 case 1:
-                    System.out.println ("Nome del nuovo giocatore: ");
+                    System.out.println("Nome del nuovo giocatore: ");
                     nome = in.nextLine();
                     in.nextLine();
-                    System.out.println ("Il nuovo giocatore è capitano?: ");
+                    System.out.println("Il nuovo giocatore è capitano?: ");
                     capitano = in.nextLine();
                     in.nextLine();
-                    System.out.println ("Goal nuovo giocatore: ");
+                    System.out.println("Goal nuovo giocatore: ");
                     goal = in.nextInt();
                     in.nextLine();
                     Funzioni.aggiuntaGiocatore(g, nome, goal, capitano, conta);
@@ -53,10 +54,10 @@ public class TestGiocatore {
                     giocatore = in.nextInt();
                     System.out.println("Nuovo numero goal?: ");
                     goal = in.nextInt();
-                    if(goal<0){
+                    if (goal < 0) {
                         System.out.println("ERRORE!!");
                         break;
-                    }else {
+                    } else {
                         in.nextLine();
                         System.out.println("Nuovo nome?: ");
                         nome = in.nextLine();
@@ -66,9 +67,26 @@ public class TestGiocatore {
                         in.nextLine();
                         Funzioni.modificaGiocatore(g, nome, goal, capitano, giocatore);
                         break;
+                    }
+
+                case 4:
 
                     break;
 
+                case 5:
+
+                    break;
+
+                case 6:
+
+                    break;
+
+                case 7:
+
+                    break;
+
+                case 0:
+                    break;
             }
 
 
