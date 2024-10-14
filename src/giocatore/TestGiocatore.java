@@ -2,7 +2,10 @@ package giocatore;
 
 import java.util.Scanner;
 
-public class Main {
+public class TestGiocatore {
+
+    static Giocatore [] g = new Giocatore[11];
+
     public static void main(String[] args) {
 
         Scanner in = new Scanner (System.in);
@@ -12,12 +15,6 @@ public class Main {
         int goal = 0;
         int conta = 0;
 
-        Giocatore [] g = new Giocatore[11];
-        Giocatore g1 = new Giocatore();
-        System.out.println ("Nome del giocatore 1: "); g1.setNome(in.nextLine());
-        System.out.println ("Il giocatore 1 è capitano?: "); g1.setCapitano(in.nextLine());
-        System.out.println ("Goal giocatore 1: "); g1.setGoal(in.nextInt());
-        in.nextLine();
 
         do {
             System.out.println("\nScegli un'opzione:");
@@ -42,10 +39,17 @@ public class Main {
                     System.out.println ("Goal nuovo giocatore: ");
                     goal = in.nextInt();
                     in.nextLine();
-                    aggiuntaGiocatore(nome, goal, capitano, conta, g);
+                    Funzioni.aggiuntaGiocatore(g, nome, goal, capitano, conta);
                     conta++;
+                    break;
 
                 case 2:
+                    Funzioni.visualizzaGiocatori(g, conta);
+                    break;
+
+                case 3:
+
+                    break;
 
             }
 
@@ -53,8 +57,4 @@ public class Main {
 
         }while (scelta != 0);
     }
-
-    private static void aggiuntaGiocatore (String nomeNuovo, int goalNuovo, String capitanoNuovo, int indice, Giocatore[] g){
-            g[indice] = new Giocatore(nomeNuovo, goalNuovo, capitanoNuovo, indice);
-        }
 }
