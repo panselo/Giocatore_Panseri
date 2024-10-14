@@ -31,7 +31,11 @@ public class Giocatore {
         return goal;
     }
     public void setGoal(int g){
-        goal = g;
+        if (goal >= 0){
+            goal = g;
+        } else {
+            goal = 0;
+        }
     }
 
 
