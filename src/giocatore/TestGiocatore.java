@@ -14,6 +14,7 @@ public class TestGiocatore {
         String capitano = " ";
         int goal = 0;
         int conta = 0;
+        int giocatore;
 
 
         do {
@@ -48,11 +49,27 @@ public class TestGiocatore {
                     break;
 
                 case 3:
+                    System.out.println("Di quale giocatore vorresti modificare i dati?: ");
+                    giocatore = in.nextInt();
+                    System.out.println("Nuovo numero goal?: ");
+                    goal = in.nextInt();
+                    if(goal<0){
+                        System.out.println("ERRORE!!");
+                        break;
+                    }else {
+                        in.nextLine();
+                        System.out.println("Nuovo nome?: ");
+                        nome = in.nextLine();
+                        in.nextLine();
+                        System.out.println("è capitano(true/false)?: ");
+                        capitano = in.nextLine();
+                        in.nextLine();
+                        Funzioni.modificaGiocatore(g, nome, goal, capitano, giocatore);
+                        break;
 
                     break;
 
             }
-
 
 
         }while (scelta != 0);
