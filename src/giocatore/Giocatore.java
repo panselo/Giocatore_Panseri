@@ -39,7 +39,7 @@ public class Giocatore {
     }
 
 
-    public Giocatore(String nomeNuovo, String capitanoNuovo, int goalNuovo) {
+    public Giocatore(String nomeNuovo, int nuovo, String capitanoNuovo, int goalNuovo) {
         setNome(nomeNuovo);
         setCapitano(capitanoNuovo);
         setGoal(goalNuovo);

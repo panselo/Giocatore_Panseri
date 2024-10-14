@@ -10,6 +10,7 @@ public class Main {
         String nome = " ";
         String capitano = " ";
         int goal = 0;
+        int conta = 0;
 
         Giocatore [] g = new Giocatore[11];
         Giocatore g1 = new Giocatore();
@@ -30,31 +31,30 @@ public class Main {
             System.out.println("0. Esci");
             scelta = in.nextInt();
             switch (scelta){
+
                 case 1:
-                    System.out.println ("Nome del giocatore 2: ");
-                    System.out.println ("Il giocatore 2 è capitano?: ");
-                    System.out.println ("Goal giocatore 2: ");
+                    System.out.println ("Nome del nuovo giocatore: ");
+                    nome = in.nextLine();
                     in.nextLine();
-                    
+                    System.out.println ("Il nuovo giocatore è capitano?: ");
+                    capitano = in.nextLine();
+                    in.nextLine();
+                    System.out.println ("Goal nuovo giocatore: ");
+                    goal = in.nextInt();
+                    in.nextLine();
+                    aggiuntaGiocatore(nome, goal, capitano, conta, g);
+                    conta++;
+
+                case 2:
+
             }
 
 
 
         }while (scelta != 0);
-
-
-
-        System.out.println ("Nome del giocatore 2: "); g2.setNome(in.nextLine());
-        System.out.println ("Il giocatore 2 è capitano?: "); g2.setCapitano(in.nextLine());
-        System.out.println ("Goal giocatore 2: "); g2.setGoal(in.nextInt());
-        in.nextLine();
-
-        g[0] = g1;
-
-
     }
 
-    private static void aggiuntaGiocatore (String nomeNuovo, int goalNuovo, String capitanoNuovo, int indice){
-            g[indice] = Giocatore(nomeNuovo, goalNuovo, capitanoNuovo);
+    private static void aggiuntaGiocatore (String nomeNuovo, int goalNuovo, String capitanoNuovo, int indice, Giocatore[] g){
+            g[indice] = new Giocatore(nomeNuovo, goalNuovo, capitanoNuovo, indice);
         }
 }
